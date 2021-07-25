@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--:::::::::::::::::::::::: Link Css & Font Awesome ::::::::::::::::::::::::-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/410be39118.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+
+<!--:::::::::::::::::::::::: Google Fonts ::::::::::::::::::::::::-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+    <title>PLASTIC DISASTER</title>
+</head>
+
+
+<body>
+<!--:::::::::::::::::::::::: Nav ::::::::::::::::::::::::-->
+<nav>
+    <div class="logo">
+        <h4>A Plastic Ocean</h4>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="micro.html">MICRO</a></li>
+        <li><a href="idea.html">IDEA</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
+
+<!--:::::::::::::::::::::::: microplastic ::::::::::::::::::::::::-->
+<section class="microplastics">
+    <div class="micro__img">
+        <img src="images/spoon.webp"></a>
+    </div>
+    <p class="micro_title">microplastic</p>
+    <p class="micro_text">
+       Microplastics come from a variety of sources, including from larger plastic debris that degrades into smaller and smaller pieces. In addition, microbeads, a type of microplastic, are very tiny pieces of manufactured polyethylene plastic that are added as exfoliants to health and beauty products, such as some cleansers and toothpastes. These tiny particles easily pass through water filtration systems and end up in the ocean and Great Lakes, posing a potential threat to aquatic life.  -National Ocean Service
+    </p>
+</section>
+<script src="anime.min.js"></script>
+<script>
+    const text = document.querySelector('.micro_text');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+    const animation = anime.timeline({
+        targets : '.micro_text span',
+        easing : 'easeInOutExpo',
+        loop : 1,
+    });
+
+    animation
+    .add({
+        rotate : function(){
+            return anime.random(-360,360)
+        },
+        translateX : function(){
+            return anime.random(-500,500)
+        },
+        translateY : function(){
+            return anime.random(-500,500)
+        },
+        duration : 5000,
+        delay : anime.stagger(20),
+    })
+    .add({
+        rotate : 0,
+        translateX : 0,
+        translateY : 0,
+        duration : 5000,
+        delay : anime.stagger(20),
+    })
+</script>
+
+
+
+
+
+    
+<!--:::::::::::::::::::::::: SECTION micro2 ::::::::::::::::::::::::-->
+<section class="m_harm">
+    <h1>Harmful Indegrients</h1>
+    <p><i class="fas fa-skull-crossbones"></i>   
+       <i class="fas fa-capsules"></i></p>
+
+    <div class="m_row">
+        <div class="mharm-col">
+            <h3>Phthalates</h3>
+            <p>hormone disruption<br>harm in baby boys</p>
+        </div>
+        <div class="mharm-col">
+            <h3>BPA & BPS</h3>
+            <p>breast cancer<br>early puberty<br>infertility</p>
+        </div>
+        <div class="mharm-col">
+            <h3>PVC</h3>
+            <p>linked to cancer</p>
+        </div>
+    </div>
+</section>
+
+
+<!--:::::::::::::::::::::::: footer ::::::::::::::::::::::::-->
+<section class="footer">
+    <h4>About Me</h4>
+    <p>web developer/desinger * ios application developer * 3D CAD designer<br>
+       I love nature and concern problems that made of human. I want to make better our planet with you.</p>
+    <div class="icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <p>This website edited by <i class="fas fa-ship"></i> heeraku in 2021</p>
+</section>
+
+<!--:::::::::::::::::::::::: ScrollTrigger & app.js ::::::::::::::::::::::::-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+    
+
+
+</body>
+
+
+</html>
+
