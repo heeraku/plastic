@@ -12,7 +12,9 @@
 }
 
 body{
-    background-color:  var(--clr-background);
+    background-color: var(--clr-background);
+    overflow-x:hidden; 
+    overflow-y:auto;
 }
 
 *{
@@ -23,6 +25,7 @@ body{
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .text-center{
@@ -99,7 +102,7 @@ nav{
    .nav-links{
        position: absolute;
        right: 0px;
-       height: 93vh;
+       height: 93.5vh;
        top: 6.5vh;
        background-color: var(--clr-dark);
        display: flex;
